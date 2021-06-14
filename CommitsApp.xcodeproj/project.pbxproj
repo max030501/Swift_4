@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,13 @@
 		9448226F2677704800A359F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9448226D2677704800A359F7 /* Main.storyboard */; };
 		944822712677704900A359F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 944822702677704900A359F7 /* Assets.xcassets */; };
 		944822742677704900A359F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 944822722677704900A359F7 /* LaunchScreen.storyboard */; };
+		9448227C267773C100A359F7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9448227B267773C100A359F7 /* DetailViewController.swift */; };
+		9448228C26777EF300A359F7 /* CommitsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9448228A26777EF300A359F7 /* CommitsApp.xcdatamodeld */; };
+		9448228F26777F2100A359F7 /* Commit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9448228D26777F2100A359F7 /* Commit+CoreDataClass.swift */; };
+		9448229026777F2100A359F7 /* Commit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9448228E26777F2100A359F7 /* Commit+CoreDataProperties.swift */; };
+		9448229326778B8700A359F7 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 9448229226778B8700A359F7 /* SwiftyJSON */; };
+		944822962677ACE600A359F7 /* Author+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944822942677ACE600A359F7 /* Author+CoreDataClass.swift */; };
+		944822972677ACE600A359F7 /* Author+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944822952677ACE600A359F7 /* Author+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,12 @@
 		944822702677704900A359F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		944822732677704900A359F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		944822752677704900A359F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9448227B267773C100A359F7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		9448228B26777EF300A359F7 /* CommitsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CommitsApp.xcdatamodel; sourceTree = "<group>"; };
+		9448228D26777F2100A359F7 /* Commit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Commit+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		9448228E26777F2100A359F7 /* Commit+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Commit+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		944822942677ACE600A359F7 /* Author+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Author+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		944822952677ACE600A359F7 /* Author+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Author+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9448229326778B8700A359F7 /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +70,10 @@
 		944822662677704800A359F7 /* CommitsApp */ = {
 			isa = PBXGroup;
 			children = (
+				944822942677ACE600A359F7 /* Author+CoreDataClass.swift */,
+				944822952677ACE600A359F7 /* Author+CoreDataProperties.swift */,
+				9448228D26777F2100A359F7 /* Commit+CoreDataClass.swift */,
+				9448228E26777F2100A359F7 /* Commit+CoreDataProperties.swift */,
 				944822672677704800A359F7 /* AppDelegate.swift */,
 				944822692677704800A359F7 /* SceneDelegate.swift */,
 				9448226B2677704800A359F7 /* ViewController.swift */,
@@ -63,6 +81,8 @@
 				944822702677704900A359F7 /* Assets.xcassets */,
 				944822722677704900A359F7 /* LaunchScreen.storyboard */,
 				944822752677704900A359F7 /* Info.plist */,
+				9448227B267773C100A359F7 /* DetailViewController.swift */,
+				9448228A26777EF300A359F7 /* CommitsApp.xcdatamodeld */,
 			);
 			path = CommitsApp;
 			sourceTree = "<group>";
@@ -83,6 +103,9 @@
 			dependencies = (
 			);
 			name = CommitsApp;
+			packageProductDependencies = (
+				9448229226778B8700A359F7 /* SwiftyJSON */,
+			);
 			productName = CommitsApp;
 			productReference = 944822642677704800A359F7 /* CommitsApp.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +133,9 @@
 				Base,
 			);
 			mainGroup = 9448225B2677704800A359F7;
+			packageReferences = (
+				9448229126778B8700A359F7 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = 944822652677704800A359F7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,9 +163,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9448228F26777F2100A359F7 /* Commit+CoreDataClass.swift in Sources */,
 				9448226C2677704800A359F7 /* ViewController.swift in Sources */,
+				944822972677ACE600A359F7 /* Author+CoreDataProperties.swift in Sources */,
+				9448229026777F2100A359F7 /* Commit+CoreDataProperties.swift in Sources */,
 				944822682677704800A359F7 /* AppDelegate.swift in Sources */,
+				944822962677ACE600A359F7 /* Author+CoreDataClass.swift in Sources */,
 				9448226A2677704800A359F7 /* SceneDelegate.swift in Sources */,
+				9448227C267773C100A359F7 /* DetailViewController.swift in Sources */,
+				9448228C26777EF300A359F7 /* CommitsApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +371,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9448229126778B8700A359F7 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9448229226778B8700A359F7 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9448229126778B8700A359F7 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		9448228A26777EF300A359F7 /* CommitsApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9448228B26777EF300A359F7 /* CommitsApp.xcdatamodel */,
+			);
+			currentVersion = 9448228B26777EF300A359F7 /* CommitsApp.xcdatamodel */;
+			path = CommitsApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9448225C2677704800A359F7 /* Project object */;
 }
